@@ -1,5 +1,6 @@
-package ru.inno.task;
 import org.junit.jupiter.api.Test;
+import ru.inno.task.Account;
+import ru.inno.task.Save;
 
 public class Tests {
     @Test

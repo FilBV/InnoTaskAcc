@@ -3,14 +3,6 @@ package ru.inno.task;
 import java.util.*;
 
 
-interface Save {
-    void load();
-}
-
-interface Action {
-    void make();
-}
-
 public class Account {
     private class SaveImpl implements Save {
 
@@ -27,7 +19,7 @@ public class Account {
     private String name;
     private Map<Currency, Integer> values = new HashMap<>();
 
-    Deque<Action> deque = new ArrayDeque<>();
+    private Deque<Action> deque = new ArrayDeque<>();
 
     public Account(String name) {
         if (name == null || name.isBlank()) {
@@ -58,7 +50,6 @@ public class Account {
         } else {
             tmp = 0;
         }
-
         deque.push(() -> Account.this.values.put(cur, tmp));
         values.put(cur, val);
     }
