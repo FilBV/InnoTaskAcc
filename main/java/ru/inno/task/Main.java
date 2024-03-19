@@ -1,5 +1,7 @@
 package ru.inno.task;
 
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,6 +13,9 @@ public class Main {
         acc.addCur(Account.Currency.USD, 62);
         Save save = acc.save();
         acc.undo();
+        Date date = new Date();
+        System.out.println(date);
+
 
     }
 

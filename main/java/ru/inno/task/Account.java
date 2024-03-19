@@ -77,8 +77,7 @@ public class Account {
 
         @Override
         public String toString() {
-            final StringBuilder sb = new StringBuilder(name);
-            return sb.toString();
+            return name;
         }
 
 
